@@ -4,20 +4,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
+    <title>u50ai - Website is Live!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 50px;
-            background-color: #f4f4f4;
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#10b981',
+                        dark: '#1e293b',
+                    },
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
-    <h1>u50ai webpage is here, thanks to Judy</h1>
-    <p>This site is still under construction. Stay tuned!</p>
+<body class="min-h-screen flex flex-col items-center justify-center text-center p-4">
+    <div class="max-w-md w-full mx-auto">
+        <!-- Logo/Icon -->
+        <div class="text-primary text-6xl mb-6 pulse">
+            <i class="fa fa-check-circle"></i>
+        </div>
+        
+        <!-- Main Heading -->
+        <h1 class="text-[clamp(2rem,5vw,3rem)] font-bold text-dark mb-4">
+            u50ai is live!
+        </h1>
+        
+        <!-- Domain Display -->
+        <div class="bg-white rounded-lg shadow-lg p-4 mb-8 transform transition-all hover:shadow-xl">
+            <p class="text-gray-600 mb-2">Visit our website at:</p>
+            <p class="text-primary font-semibold text-xl">www.u50ai.com</p>
+        </div>
+        
+        <!-- Thank You Message -->
+        <div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-6 mb-8">
+            <p class="text-gray-700 text-lg">
+                A special thank you to <span class="font-semibold text-dark">Judy</span> for making this possible!
+            </p>
+        </div>
+        
+        <!-- Additional Info -->
+        <p class="text-gray-500 mb-8">
+            We're just getting started. More exciting features coming soon!
+        </p>
+        
+        <!-- Contact/Action -->
+        <div class="mt-auto">
+            <a href="mailto:support@u50ai.com" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors">
+                <i class="fa fa-envelope mr-2"></i> Get in touch
+            </a>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="mt-12 text-gray-400 text-sm">
+            <p>&copy; 2023 u50ai. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 
 </html>
